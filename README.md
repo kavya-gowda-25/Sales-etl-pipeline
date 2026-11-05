@@ -18,7 +18,7 @@ raw_sales.csv  ->  Extract  ->  Transform (clean + validate)  ->  Load (SQLite) 
 | Transform | Removes duplicates, trims and normalises text, drops missing values, invalid dates and negative quantities, adds `revenue` and `order_month` |
 | Validate | Asserts unique order IDs, positive quantities and prices, and no missing values |
 | Load | Writes a `sales` table with indexes into `output/sales.db` |
-| Report | Runs the named queries in `queries.sql` and saves `output/monthly_revenue.png` |
+| Report | Runs the named queries in `queries.sql` and saves `monthly_revenue.png` |
 
 Every cleaning rule is logged with the number of rows it affected (for example: 80 duplicates removed, 1,860 of 2,080 rows kept).
 
